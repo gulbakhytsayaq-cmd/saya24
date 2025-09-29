@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: antiquewhite;
+        display: flex;
+        justify-content: center;
+      }
+
+      .container {
+        width: 1200px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: repeat(3, 400px);
+        height: 480px;
+        position: relative;
+        padding-bottom: 60px;
+      }
+
+      .box1 {
+        background-color: black;
+      }
+
+      .box2 img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+
+      .box3 {
+        background-color: white;
+      }
+
+      .hero-title {
+        position: absolute;
+        left: 160px;
+        color: white;
+        font-size: 60px;
+        top: 100px;
+        mix-blend-mode: difference;
+      }
+
+      .hero-btn {
+        position: absolute;
+        right: 160px;
+        top: 200px;
+      }
+
+      .hero-btn a {
+        text-decoration: none;
+        color: white;
+        background-color: black;
+        padding: 10px 20px;
+      }
+
+      .hero-btn p {
+        line-height: 1.5;
+        color: gray;
+        margin-bottom: 20px;
+      }
+
+      .content {
+        background-color: white;
+        place-content: center;
+        display: grid;
+        padding: 100px;
+      }
+
+      .section-top {
+        display: grid;
+        grid-template-columns: 400px 500px;
+        width: 1000px;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+
+      .section-bottom {
+        display: grid;
+        grid-template-columns: 555px 400px;
+        grid-template-rows: repeat(2, 300px);
+        gap: 20px;
+      }
+
+      .text-block p {
+        line-height: 1.5;
+      }
+
+      .image-left {
+        grid-column: 1/2;
+        grid-row: 1/3;
+      }
+
+      .image-left img,
+      .image-right img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+
+      .image-right,
+      .image-left {
+        overflow: hidden;
+      }
+
+      .text-dark {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        background-color: black;
+        color: white;
+        padding: 30px;
+      }
+
+      .text-dark p {
+        line-height: 1.5;
+        color: gray;
+      }
+
+      .site-footer {
+        display: flex;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        gap: 100px;
+        padding: 30px 100px;
+      }
+      @media screen and (max-width: 450px) {
+        .wrapper {
+          width: 450px;
+        }
+
+        .box2 img {
+          object-fit: cover;
+          width: 450px;
+          height: 100%;
+        }
+
+        .box2 {
+          width: 450px;
+          height: 400px;
+          overflow: hidden;
+        }
+
+        .hero {
+          display: grid;
+          grid-template-columns: repeat(1, 450px);
+          height: 400px;
+          padding-bottom: 60px;
+          background-color: white;
+        }
+
+        .hero-title {
+          opacity: 1;
+          top: 380px;
+          left: 20px;
+          font-size: 45px;
+        }
+
+        .hero-btn {
+          opacity: 1;
+          top: 530px;
+          margin-bottom: 40px;
+          position: none;
+          z-index: none;
+        }
+
+        .image-top img {
+          opacity: 1;
+          width: 420px;
+          height: 400px;
+        }
+
+        .image-top {
+          width: 420px;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .box1 {
+          opacity: 0;
+        }
+
+        .section-top {
+          display: flex;
+          flex-direction: column;
+          width: 450px;
+          gap: 20px;
+          margin-bottom: 20px;
+          margin-top: 170px;
+          margin-left: 30px;
+        }
+
+        .section-bottom {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .image-left img {
+          width: 420px;
+          height: 600px;
+          margin-left: 30px;
+        }
+
+        .image-right {
+          width: 420px;
+          height: 400px;
+          margin-left: 30px;
+        }
+
+        .text-dark {
+          width: 380px;
+          height: 300px;
+          margin-left: 30px;
+          padding: 30px 20px;
+        }
+
+        .site-footer {
+          width: 410px;
+          height: 300px;
+          padding: 30px 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="hero">
+        <div class="box box1"></div>
+        <div class="box box2">
+          <img src="images/photo-1.png" />
+        </div>
+        <div class="box box3"></div>
+
+        <h1 class="hero-title">MODERN <br />ART GALLERY</h1>
+
+        <div class="hero-btn">
+          <p>
+            The arts in the collection of the <br />
+            Modern Art Gallery all started from<br />
+            a spark of inspiration. Will these <br />
+            pieces inspire you? Visit as amd find <br />
+            out.
+          </p>
+          <a href="location.html">OUR LOCATION</a>
+        </div>
+      </div>
+
+      <!-- CONTENT SECTION -->
+      <div class="content">
+        <div class="section-top">
+          <div class="text-block">
+            <h1>
+              YOUR DAT AT<br />
+              THE GALLERY
+            </h1>
+            <p>
+              Wander through our distinct <br />
+              collections ans find new insights<br />
+              about our artists. Dive into the <br />details of their creative
+              process.
+            </p>
+          </div>
+          <div class="image-top"><img src="images/photo-2.png" /></div>
+        </div>
+
+        <div class="section-bottom">
+          <div class="image-left">
+            <img src="images/photo-3.png" />
+          </div>
+          <div class="image-right"><img src="images/photo-4.png" /></div>
+          <div class="text-dark">
+            <h1>
+              COME & BE <br />
+              INSPIRED
+            </h1>
+            <p>
+              We're excited to welcome you to our <br />
+              gallery and see how our collections<br />
+              influence you.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-footer">
+        <h1>
+          MODERN <br />
+          ART GALLERY
+        </h1>
+        <p>
+          The Modern Art Gallery is free to all visitors and open <br />
+          seven days a week from 8am to 9 pm. Find us at 99<br />
+          KIng Street, Newport, USA.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
